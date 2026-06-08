@@ -27,7 +27,7 @@ const TEMPLATES: Template[] = [
     id: "portfolio",
     name: "Minimal Portfolio",
     heroTitle: "Simple Designs, Solid Engineering",
-    heroSub: "I gaslight rocks to think and craft beautiful, high-contrast, tactile websites.",
+    heroSub: "Engineering robust full-stack software and fully interactive, high-fidelity tactile websites.",
     ctaText: "Explore Projects",
     themeColor: "emerald"
   },

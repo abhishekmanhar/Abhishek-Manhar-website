@@ -14,12 +14,12 @@ export const PERSONAL_INFO = {
   instagram: "https://www.instagram.com/abhishekmnhr/",
   portfolio: "https://abhishekmanhar.vercel.app/",
   resumeUrl: "https://drive.google.com/file/d/11ZDgFklnkDrgRcbTMz9Pd7vNC3ZogWKp/view?usp=sharing", // Standard self PDF view
-  oneLiner: "I gaslight rocks 🪨 to think 🧠",
+  oneLiner: "A passion-driven generalist developer engineering high-performance systems and bespoke interactive digital experiences.",
   taglines: [
-    "I gaslight rocks 🪨 to think 🧠",
-    "I don't have a niche, I'm a generalist. I work on web, mobile, desktop, server, embedded systems.",
-    "Making design fun, tactile, and highly functional.",
-    "Turning complex engineering challenges into fluid user interfaces."
+    "Engineering high-performance systems & fluid digital experiences.",
+    "A generalist developer building robust, scale-focused software.",
+    "Former Software Developer Intern at JPMorgan Chase & Co.",
+    "Bridging complex system architecture with human-centered designs."
   ],
   bioParagraph1: "Hi, I'm Abhishek Manhar — I program computers. I'm a generalist developer who worked at JP Morgan Chase & Co as a Software Developer Intern. I don't believe in limits or strict niches; I build across the entire stack, spanning high-fidelity web apps, intuitive mobile platforms, desktop tools, optimized servers, and responsive embedded systems.",
   bioParagraph2: "Developing taught me system performance, multi-user scaling, and strict architecture. Personal experimentation and design taught me constraint, design intuition, and user empathy. I stopped picking between separate engineering and designer identities and started harnessing their productive tension to compose products people genuinely love."

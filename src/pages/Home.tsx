@@ -70,16 +70,16 @@ export default function Home() {
             {PERSONAL_INFO.oneLiner} {PERSONAL_INFO.bioParagraph1.split(".").slice(0, 2).join(".")}.
           </motion.p>
 
-          {/* Dynamic raise snippet info highlight */}
+          {/* Dynamic milestone snippet info highlight */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6 }}
             className="flex items-center gap-3 bg-[#E8E5DE]/45 border border-border-custom px-4 py-2 rounded-lg mt-1 overflow-hidden"
           >
-            <span className="font-mono text-xs text-accent font-bold">MILSTONE</span>
+            <span className="font-mono text-xs text-accent font-bold">MILESTONE</span>
             <span className="text-xs sm:text-sm text-primary font-medium">
-              Designed & engineered platforms helping raise over ₹10L+ in client launches.
+              Former Software Intern at Citi ICG & JPMorgan Chase & Co. | TechGig Code Gladiators Semi-finalist.
             </span>
           </motion.div>
 
