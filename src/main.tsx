@@ -19,50 +19,24 @@ if (typeof window !== 'undefined') {
       };
     };
   } else {
-    const originalMatchMedia = window.matchMedia;
-    (window as any).matchMedia = function(query: string) {
-      try {
-        const res = originalMatchMedia.call(window, query);
-        if (!res) {
-          return {
-            matches: false,
-            media: query,
-            onchange: null,
-            addListener: function() {},
-            removeListener: function() {},
-            addEventListener: function() {},
-            removeEventListener: function() {},
-            dispatchEvent: function() { return false; }
+    try {
+      // If addListener/removeListener are missing (e.g. in older or mock environments), polyfill on prototype cleanly
+      const mqlProto = (window.MediaQueryList as any)?.prototype;
+      if (mqlProto) {
+        if (typeof mqlProto.addListener !== 'function') {
+          mqlProto.addListener = function(cb: any) {
+            this.addEventListener('change', cb);
           };
         }
-        if (typeof res.addListener !== 'function') {
-          (res as any).addListener = function(cb: any) {
-            if (typeof res.addEventListener === 'function') {
-              res.addEventListener('change', cb);
-            }
+        if (typeof mqlProto.removeListener !== 'function') {
+          mqlProto.removeListener = function(cb: any) {
+            this.removeEventListener('change', cb);
           };
         }
-        if (typeof res.removeListener !== 'function') {
-          (res as any).removeListener = function(cb: any) {
-            if (typeof res.removeEventListener === 'function') {
-              res.removeEventListener('change', cb);
-            }
-          };
-        }
-        return res;
-      } catch (e) {
-        return {
-          matches: false,
-          media: query,
-          onchange: null,
-          addListener: function() {},
-          removeListener: function() {},
-          addEventListener: function() {},
-          removeEventListener: function() {},
-          dispatchEvent: function() { return false; }
-        };
       }
-    };
+    } catch (e) {
+      console.warn("Could not check/patch MediaQueryList listeners prototype:", e);
+    }
   }
 }
 

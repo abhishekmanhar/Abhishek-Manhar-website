@@ -5,6 +5,8 @@ import { ArrowRight, ArrowDown, Plus, Minus, Github, ExternalLink } from "lucide
 import { PERSONAL_INFO, PROJECTS, EXPERIENCES, TESTIMONIALS } from "../data";
 // @ts-ignore
 import experiencePortrait from "../assets/images/regenerated_image_1780862136120.png";
+// @ts-ignore
+import dionThumbnail from "../assets/images/regenerated_image_1780954424543.png";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -171,40 +173,40 @@ export default function Home() {
             className="w-full lg:w-[40%] flex justify-center items-center h-[380px] relative"
             id="intro-collage-container"
           >
-            {/* Collage Image 1 */}
+            {/* Collage Image 1: Abhishek's SaaS Builder (DION) */}
             <div
               className="absolute w-[180px] h-[240px] rounded-lg overflow-hidden border-2 border-bg-cream shadow-md -translate-x-16 -translate-y-12 -rotate-[3deg] hover:rotate-0 hover:scale-110 hover:z-20 cubic-transition group select-none"
               data-cursor="view"
             >
               <img
-                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=80"
-                alt="Programming monitor"
+                src={dionThumbnail}
+                alt="DION Website Builder Canvas"
                 className="w-full h-full object-cover rounded-lg group-hover:scale-105 duration-500"
                 loading="lazy"
               />
             </div>
 
-            {/* Collage Image 2 */}
+            {/* Collage Image 2: His Passion (Terracotta Dawn Stroke Acrylic Painting) */}
             <div
               className="absolute w-[170px] h-[220px] rounded-lg overflow-hidden border-2 border-bg-cream shadow-md translate-x-12 translate-y-10 rotate-[2deg] hover:rotate-0 hover:scale-110 hover:z-20 cubic-transition group select-none"
               data-cursor="view"
             >
               <img
-                src="https://images.unsplash.com/photo-1547891654-e66ed7edd96c?w=400&auto=format&fit=crop&q=80"
-                alt="Acrylic paint colors"
+                src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=400&auto=format&fit=crop&q=80"
+                alt="Terracotta Dawn Stroke Acrylic Painting"
                 className="w-full h-full object-cover rounded-lg group-hover:scale-105 duration-500"
                 loading="lazy"
               />
             </div>
 
-            {/* Collage Image 3 */}
+            {/* Collage Image 3: Core Craft (Enterprise Code visualization) */}
             <div
               className="absolute w-[190px] h-[190px] rounded-lg overflow-hidden border-2 border-bg-cream shadow-md -rotate-[1deg] translate-y-2 translate-x-3 hover:translate-y-0 hover:scale-110 hover:z-20 cubic-transition group select-none"
               data-cursor="view"
             >
               <img
-                src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&auto=format&fit=crop&q=80"
-                alt="Clean development desk setup"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&auto=format&fit=crop&q=80"
+                alt="Clean development code systems"
                 className="w-full h-full object-cover rounded-lg group-hover:scale-105 duration-500"
                 loading="lazy"
               />

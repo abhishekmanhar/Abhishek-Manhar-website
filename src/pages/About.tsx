@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { PERSONAL_INFO, EXPERIENCES } from "../data";
 import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
 // @ts-ignore
-import dionThumbnail from "../assets/images/regenerated_image_1780838739317.png";
+import dionThumbnail from "../assets/images/regenerated_image_1780954424543.png";
 
 export default function About() {
   const interests = [

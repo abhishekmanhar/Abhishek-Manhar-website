@@ -1,6 +1,6 @@
 import { Project, Experience, Testimonial, GalleryItem } from "./types";
 // @ts-ignore
-import dionThumbnail from "./assets/images/regenerated_image_1780838739317.png";
+import dionThumbnail from "./assets/images/regenerated_image_1780954424543.png";
 
 export const PERSONAL_INFO = {
   name: "Abhishek Manhar",

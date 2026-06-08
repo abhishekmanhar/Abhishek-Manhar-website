@@ -7,6 +7,7 @@ import CaseStudy from "./pages/CaseStudy";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CustomCursor from "./components/CustomCursor";
+import Chatbot from "./components/Chatbot";
 import { useEffect } from "react";
 
 // Scroll restoration to top on any location context shift
@@ -66,6 +67,8 @@ export default function App() {
         </main>
 
         <Footer />
+        {/* Floating Gemini AI Grounded Chatbot assistant */}
+        <Chatbot />
       </div>
     </HashRouter>
   );
