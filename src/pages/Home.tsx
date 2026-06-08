@@ -44,7 +44,7 @@ export default function Home() {
           
           {/* Subtle staggered load container */}
           {/* Headline Rotating Box */}
-          <div className="relative h-[100px] sm:h-[130px] md:h-[180px] w-full overflow-hidden flex items-center">
+          <div className="relative h-[150px] sm:h-[130px] md:h-[180px] w-full overflow-hidden flex items-center">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={headlineIndex}
@@ -52,8 +52,8 @@ export default function Home() {
                 animate={{ y: "0%", opacity: 1 }}
                 exit={{ y: "-100%", opacity: 0 }}
                 transition={{ duration: 0.45, ease: [0.25, 0.46, 0.45, 0.94] }}
-                className="absolute font-serif text-[7vw] sm:text-[6vw] md:text-[5.5vw] text-primary leading-[1.05] tracking-tight font-normal select-none"
-                style={{ fontSize: "clamp(2.4rem, 6.2vw, 5.2rem)" }}
+                className="absolute font-serif text-[7vw] sm:text-[6vw] md:text-[5.5vw] text-primary leading-[1.18] tracking-tight font-normal select-none"
+                style={{ fontSize: "clamp(2.2rem, 6.2vw, 5.2rem)" }}
               >
                 {PERSONAL_INFO.taglines[headlineIndex]}
               </motion.h1>
