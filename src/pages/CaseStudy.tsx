@@ -19,6 +19,17 @@ export default function CaseStudy() {
   const currentIdx = PROJECTS.findIndex((p) => p.id === slug || p.slug === slug);
   const project = currentIdx !== -1 ? PROJECTS[currentIdx] : null;
 
+  // Dynamic document title & description update for dynamic Projects SEO caching
+  useEffect(() => {
+    if (project) {
+      document.title = `Case Study: ${project.title} — Abhishek Manhar`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute("content", `${project.shortDescription} — An in-depth case study exploring challenges, technical solutions, and stack details by Abhishek Manhar.`);
+      }
+    }
+  }, [project]);
+
   // Navigate to top when project slug shifts
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
@@ -110,6 +121,10 @@ export default function CaseStudy() {
             alt={project.title}
             className={`w-full h-full object-cover transition-opacity duration-300 filter saturate-[0.95] contrast-[1.02] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
             onLoad={() => setImageLoaded(true)}
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=80";
+              setImageLoaded(true);
+            }}
             data-cursor="view"
           />
         </div>

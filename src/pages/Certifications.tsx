@@ -293,6 +293,15 @@ export default function Certifications() {
   const [previewTab, setPreviewTab] = useState<"visual" | "verify" | "skills">("visual");
   const [copied, setCopied] = useState(false);
 
+  // Dynamic document title & description update for Certifications SEO caching
+  useEffect(() => {
+    document.title = "Certifications & Lab Playgrounds — Abhishek Manhar";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Explore academic validation, corporate badges, and technical certifications earned by Abhishek Manhar across Web Engineering, DevOps, Cybersecurity, and AI.");
+    }
+  }, []);
+
   // Group stats
   const stats = useMemo(() => {
     return {

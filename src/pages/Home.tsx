@@ -14,6 +14,15 @@ export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
 
+  // Dynamic document title & description update for client-side SEO caching
+  useEffect(() => {
+    document.title = "Abhishek Manhar — Generalist & Full-Stack Developer";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Portfolio of Abhishek Manhar, a passion-driven Generalist & Full-Stack Software Developer. Former Intern at JPMorgan Chase and Citi. Builder of high-performance SaaS builders, real-time job indices, and interactive AI systems.");
+    }
+  }, []);
+
   // 1. Tagline dynamic carousel sequence (swapping every 3.5 seconds)
   useEffect(() => {
     const interval = setInterval(() => {
@@ -182,6 +191,9 @@ export default function Home() {
                 src={dionThumbnail}
                 alt="DION Website Builder Canvas"
                 className="w-full h-full object-cover rounded-lg group-hover:scale-105 duration-500"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&auto=format&fit=crop&q=80";
+                }}
                 loading="lazy"
               />
             </div>
@@ -535,6 +547,9 @@ export default function Home() {
                 src={experiencePortrait}
                 alt="Representative Portrait"
                 className="w-full h-full object-cover filter saturate-[0.85] contrast-[1.03]"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=80";
+                }}
                 loading="lazy"
                 data-cursor="view"
               />

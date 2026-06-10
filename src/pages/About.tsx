@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { motion } from "motion/react";
 import { PERSONAL_INFO, EXPERIENCES } from "../data";
 import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
@@ -5,6 +6,15 @@ import { Briefcase, Calendar, MapPin, Award } from "lucide-react";
 import dionThumbnail from "../assets/images/regenerated_image_1780954424543.png";
 
 export default function About() {
+  // Page-specific SEO configuration
+  useEffect(() => {
+    document.title = "About Abhishek Manhar — Background & Art";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Find out more about Abhishek Manhar's educational background, his professional tech internships at Citi and JPMorgan Chase, and his paintings & graphic layout designs.");
+    }
+  }, []);
+
   const interests = [
     "Traveling ✈",
     "Cooking 🍳",
@@ -106,6 +116,9 @@ export default function About() {
                 src={dionThumbnail}
                 alt="UI SaaS Layouts"
                 className="w-full h-full object-cover group-hover:scale-105 duration-500"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=400&auto=format&fit=crop&q=80";
+                }}
                 loading="lazy"
               />
             </div>
